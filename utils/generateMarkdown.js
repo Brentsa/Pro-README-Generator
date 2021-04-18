@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
     return '';
   }
 
-  return `![badge](${renderLicenseLink(license)})`;
+  return `![badge](${renderLicenseLink(license).trim().replace(" ", "%20")})`;
 }
 
 // TODO: Create a function that returns the license link
