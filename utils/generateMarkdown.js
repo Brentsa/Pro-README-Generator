@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
     return '';
   }
 
-  return `![badge](${renderLicenseLink(license).trim().replace(" ", "%20")})`;
+  return `![badge](${renderLicenseLink(license)})`;
 }
 
 // TODO: Create a function that returns the license link
@@ -15,7 +15,7 @@ function renderLicenseLink(license) {
     return '';
   }
 
-  return `https://img.shields.io/badge/license-${license}-green`;
+  return (`https://img.shields.io/badge/license-${license}-green`).trim().replace(" ", "%20");
 }
 
 // TODO: Create a function that returns the license section of README
