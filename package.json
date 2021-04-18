@@ -1,14 +1,23 @@
 {
-  "name": "static-site",
+  "name": "Pro-README-Generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brentsa/Pro-README-Generator.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brentsa/Pro-README-Generator/issues"
+  },
+  "homepage": "https://github.com/Brentsa/Pro-README-Generator#readme",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^8.0.0"
   }
 }
