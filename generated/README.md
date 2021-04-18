@@ -1,40 +1,40 @@
 
-      # Sean
+  # Sean Brent
 
-      ## Description 
+  ## Description 
 
-      A big description
+  One super sweet dude.
 
-      ## Table of Contents
+  ## Table of Contents
 
-      * [Installation](#installation)
-      * [Usage](#usage)
-      * [Credits](#credits)
-      * [License](#license)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
 
-      ## Installation
+  ## Installation
 
-      Intall like this.
+  Install by running the app.
 
-      ## Usage 
+  ## Usage 
 
-      Wow thats huge
+  Use by following instructions.
 
-      ## Contributing
+  ## Contributing
 
-      Myself
+  Sean Brent
 
-      ## Tests
+  ## Tests
 
-      Cool
+  Test it by going into the app.
 
-      ## Badges
+  ## Badges
 
-      ## Features
+  ## Features
 
-      ## Credits
+  ## Credits
 
-      ## License
+  ## License
 
-      MIT License
+  MIT License
   
