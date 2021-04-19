@@ -13,7 +13,7 @@ function renderLicenseLink(license) {
     return '';
   }
 
-  return (`https://img.shields.io/badge/license-${license}-green`).trim().replace(" ", "%20");
+  return (`https://img.shields.io/badge/license-${license}-green`).split(" ").join("%20");
 }
 
 // Returns the license section of README
