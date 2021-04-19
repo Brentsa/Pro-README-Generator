@@ -28,7 +28,7 @@ const questions = [
     {
         type: "input",
         name: "contribution",
-        message: "Enter project contributers: "
+        message: "How to contribute to the project: "
     },
     {
         type: "input",
@@ -40,6 +40,11 @@ const questions = [
         name: "license",
         message: "Choose a license: ",
         choices: ["MIT License", "GNU GPLv3", "Apache License 2.0", "Mozilla Public License 2.0", "ISC License", "Boost Software License 1.0", "The Unlicense"]
+    },
+    {
+        type: "input",
+        name: "credit",
+        message: "Enter project contributers: "
     }
 ];
 

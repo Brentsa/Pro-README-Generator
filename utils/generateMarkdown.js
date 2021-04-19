@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if(!license){
     return '';
@@ -8,8 +7,7 @@ function renderLicenseBadge(license) {
   return `![badge](${renderLicenseLink(license)})`;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Returns the license link
 function renderLicenseLink(license) {
   if(!license){
     return '';
@@ -18,12 +16,20 @@ function renderLicenseLink(license) {
   return (`https://img.shields.io/badge/license-${license}-green`).trim().replace(" ", "%20");
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// Returns the license section of README
+function renderLicenseSection(license) {
+  if(!license){
+    return '';
+  }
+
+  return`
+  ## License
+  ${license}
+  `;
+}
 
 // TODO: Create a function to generate markdown for README
-const generateMarkdown = ({title, description, install, usage, contribution, test, license}) =>{
+const generateMarkdown = ({title, description, install, usage, contribution, test, license, credit}) =>{
 
   return `
   # ${title}
@@ -40,15 +46,14 @@ const generateMarkdown = ({title, description, install, usage, contribution, tes
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Credits](#credits)
-  
+
   ## Installation
   ${install}
 
   ## Usage 
   ${usage}
 
-  ## License
-  ${license}
+  ${renderLicenseSection(license)}
 
   ## Contributing
   ${contribution}
@@ -57,7 +62,7 @@ const generateMarkdown = ({title, description, install, usage, contribution, tes
   ${test}
 
   ## Credits
-
+  ${credit}
   `;
 }
 
