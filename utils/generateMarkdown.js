@@ -61,6 +61,8 @@ const generateMarkdown = ({title, description, install, usage, contribution, tes
   ## Tests
   ${test}
 
+  ## Questions
+
   ## Credits
   ${credit}
   `;
