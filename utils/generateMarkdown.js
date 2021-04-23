@@ -1,3 +1,5 @@
+var tableOfContents = [];
+
 // Returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if(!license){
@@ -22,8 +24,7 @@ function renderLicenseSection(license) {
     return'';
   }
 
-  return`
-  ## License
+  return`## License
   ${license}`;
 }
 
@@ -33,8 +34,7 @@ function renderDescriptionSection(description){
     return'';
   }
 
-  return`
-  ## Description 
+  return`## Description 
   ${description}`;
 }
 
@@ -44,8 +44,7 @@ function renderInstallationSection(install){
     return'';
   }
 
-  return`
-  ## Installation
+  return`## Installation
   ${install}`;
 }
 
@@ -55,8 +54,7 @@ function renderUsageSection(usage){
     return'';
   }
 
-  return`
-  ## Usage
+  return`## Usage
   ${usage}`;
 }
 
@@ -66,8 +64,7 @@ function renderContributingSection(contribution){
     return'';
   }
 
-  return`
-  ## Contributing
+  return`## Contributing
   ${contribution}`;
 }
 
@@ -77,15 +74,13 @@ function renderTestSection(test){
     return'';
   }
 
-  return`
-  ## Tests
+  return`## Tests
   ${test}`;
 }
 
 function renderQuestionsSection(email, github){
-  
-  return `
-  ## Questions
+
+  return `## Questions
   You can reach me via:
   * Email: ${email}
   * GitHub: ${github}`;
@@ -97,36 +92,64 @@ function renderCreditSection(credit){
     return'';
   }
 
-  return`
-  ## Credits
+  return`## Credits
   ${credit}`;
+}
+
+function loadTableOfContents(install, usage, contribution, test, license, credit){
+  if(install){tableOfContents.push("Installation");}
+  if(usage){tableOfContents.push("Usage");}
+  if(license){tableOfContents.push("License");}
+  if(contribution){tableOfContents.push("Contributing");}
+  if(test){tableOfContents.push("Tests");}
+  tableOfContents.push("Questions");
+  if(credit){tableOfContents.push("Credits");}
+}
+
+function createTableOfContents(){
+  var returnList = [];
+
+  for(var i = 0; i < tableOfContents.length; i++){
+    returnList.push(`* [${tableOfContents[i]}](#${tableOfContents[i]})`)
+  }
+
+  return returnList.join("\n");
+}
+
+function renderTableOfContents(){
+
+  return`## Table of Contents
+
+  ${createTableOfContents()}`;
 }
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = ({title, description, install, usage, contribution, test, license, credit, github, email}) =>{
 
+  loadTableOfContents(install, usage, contribution, test, license, credit);
+
   return `
-  # ${title}
-  ${renderLicenseBadge(license)}
-  ${renderDescriptionSection(description)}
+# ${title}
+${renderLicenseBadge(license)}
 
-  ## Table of Contents
+${renderDescriptionSection(description)}
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Credits](#credits)
+${renderTableOfContents()}
 
-  ${renderInstallationSection(install)}
-  ${renderUsageSection(usage)}
-  ${renderLicenseSection(license)}
-  ${renderContributingSection(contribution)}
-  ${renderTestSection(test)}
-  ${renderQuestionsSection(email,github)}
-  ${renderCreditSection(credit)}
-  `;
+${renderInstallationSection(install)}
+
+${renderUsageSection(usage)}
+
+${renderLicenseSection(license)}
+
+${renderContributingSection(contribution)}
+
+${renderTestSection(test)}
+
+${renderQuestionsSection(email,github)}
+
+${renderCreditSection(credit)}`;
 }
 
 module.exports = generateMarkdown;
+
