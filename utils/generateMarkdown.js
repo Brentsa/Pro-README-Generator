@@ -19,12 +19,87 @@ function renderLicenseLink(license) {
 // Returns the license section of README
 function renderLicenseSection(license) {
   if(!license){
-    return '';
+    return'';
   }
 
   return`
   ## License
   ${license}`;
+}
+
+// Returns string for description section
+function renderDescriptionSection(description){
+  if(!description){
+    return'';
+  }
+
+  return`
+  ## Description 
+  ${description}`;
+}
+
+// Returns string for installation section
+function renderInstallationSection(install){
+  if(!install){
+    return'';
+  }
+
+  return`
+  ## Installation
+  ${install}`;
+}
+
+// Returns string for usage section
+function renderUsageSection(usage){
+  if(!usage){
+    return'';
+  }
+
+  return`
+  ## Usage
+  ${usage}`;
+}
+
+// Returns string for contribution section
+function renderContributingSection(contribution){
+  if(!contribution){
+    return'';
+  }
+
+  return`
+  ## Contributing
+  ${contribution}`;
+}
+
+// Returns string for test section
+function renderTestSection(test){
+  if(!test){
+    return'';
+  }
+
+  return`
+  ## Tests
+  ${test}`;
+}
+
+function renderQuestionsSection(email, github){
+  
+  return `
+  ## Questions
+  You can reach me via:
+  * Email: ${email}
+  * GitHub: ${github}`;
+}
+
+// Returns string for credit section
+function renderCreditSection(credit){
+  if(!credit){
+    return'';
+  }
+
+  return`
+  ## Credits
+  ${credit}`;
 }
 
 // TODO: Create a function to generate markdown for README
@@ -33,9 +108,7 @@ const generateMarkdown = ({title, description, install, usage, contribution, tes
   return `
   # ${title}
   ${renderLicenseBadge(license)}
-
-  ## Description 
-  ${description}
+  ${renderDescriptionSection(description)}
 
   ## Table of Contents
 
@@ -46,27 +119,13 @@ const generateMarkdown = ({title, description, install, usage, contribution, tes
   * [Tests](#tests)
   * [Credits](#credits)
 
-  ## Installation
-  ${install}
-
-  ## Usage 
-  ${usage}
-
+  ${renderInstallationSection(install)}
+  ${renderUsageSection(usage)}
   ${renderLicenseSection(license)}
-
-  ## Contributing
-  ${contribution}
-
-  ## Tests
-  ${test}
-
-  ## Questions
-  You can reach me via:
-  * Email: ${email}
-  * GitHub: ${github}
-
-  ## Credits
-  ${credit}
+  ${renderContributingSection(contribution)}
+  ${renderTestSection(test)}
+  ${renderQuestionsSection(email,github)}
+  ${renderCreditSection(credit)}
   `;
 }
 

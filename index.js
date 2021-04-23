@@ -8,32 +8,39 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "Describe the name of your project: "
+        message: "Describe the name of your project:",
+        validate: answer => {
+            if(!answer){
+                return "Please enter a valid description.";
+            }
+
+            return true;
+        }
     },
     {
         type: "input",
         name: "description",
-        message: "Enter a project description: "
+        message: "Enter a project description:"
     },
     {
         type: "input",
         name: "install",
-        message: "Enter installation instructions: "
+        message: "Enter installation instructions:"
     },
     {
         type: "input",
         name: "usage",
-        message: "Enter usage information: "
+        message: "Enter usage information:"
     },
     {
         type: "input",
         name: "contribution",
-        message: "How to contribute to the project: "
+        message: "How to contribute to the project:"
     },
     {
         type: "input",
         name: "test",
-        message: "Enter test instructions: "
+        message: "Enter test instructions:"
     },
     {
         type: "list",
@@ -44,17 +51,31 @@ const questions = [
     {
         type: "input",
         name: "credit",
-        message: "Enter project contributers: "
+        message: "Enter project contributers:"
     },
     {
         type: "input",
         name: "github",
-        message: "Enter your GitHub username: "
+        message: "Enter your GitHub username:",
+        validate: answer => {
+            if(!answer){
+                return "Please enter a valid GitHub username.";
+            }
+
+            return true;
+        }
     },
     {
         type: "input",
         name: "email",
-        message: "Enter your email address: "
+        message: "Enter your email address:",
+        validate: answer => {
+            if(!answer){
+                return "Please enter a valid email address.";
+            }
+
+            return true;
+        }
     }
 ];
 
