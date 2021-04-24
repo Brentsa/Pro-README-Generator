@@ -1,29 +1,27 @@
-# The Project Of All Projects
+# The title of all titles
+
+![badge](https://img.shields.io/badge/license-MIT%20License-green)
 
 ## Description
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+lkdflsdfljlf <br/> lsjflsdjfsdfkl <br/> lsdjflsdjfjsldf
 
 ## Table of Contents
 
 * [Installation](#Installation)
+* [Usage](#Usage)
 * [License](#License)
-* [Tests](#Tests)
 * [Questions](#Questions)
-* [Credits](#Credits)
 
 ## Installation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+lsdjflskdf
+
+## Usage
+ljsdfkhadshfkhsa <br/> lsdjflsdjfl <br/> djfhlsjfljsdlfkjslf
 
 ## License
-Boost Software License 1.0
-
-## Tests
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+MIT License
 
 ## Questions
-You can reach me via:
-* Email: seanbrent5@live.ca
-* GitHub: [Brentsa](https://github.com/Brentsa)
-
-## Credits
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+You may contact the project author via:
+* Email: sdfsd
+* GitHub: [dfsdf](https://github.com/dfsdf)

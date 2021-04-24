@@ -77,7 +77,7 @@ function renderTestSection(test){
 function renderQuestionsSection(email, github){
 
   return `## Questions
-You can reach me via:
+You may contact the project author via:
 * Email: ${email}
 * GitHub: [${github}](https://github.com/${github})`;
 }
@@ -121,7 +121,7 @@ function renderTableOfContents(){
 ${createTableOfContents()}`;
 }
 
-// TODO: Create a function to generate markdown for README
+// Generate markdown for the README
 const generateMarkdown = ({title, description, install, usage, contribution, test, license, credit, github, email}) =>{
 
   //Load the table of contents array so that when we go to render it, it will know what sections the user requires
@@ -132,6 +132,7 @@ const generateMarkdown = ({title, description, install, usage, contribution, tes
 
   //If sections have content then we push them into the markdown array
   markdownArray.push(`# ${title}`);
+  markdownArray.push(renderLicenseBadge(license));
   if(description){markdownArray.push(renderDescriptionSection(description));}
   markdownArray.push(renderTableOfContents());
   if(install){markdownArray.push(renderInstallationSection(install));}

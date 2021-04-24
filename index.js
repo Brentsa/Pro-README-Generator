@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: "input",
@@ -20,27 +20,27 @@ const questions = [
     {
         type: "input",
         name: "description",
-        message: "Write a project description (leave blank to omit section):"
+        message: "Write a project description:"
     },
     {
         type: "input",
         name: "install",
-        message: "Enter installation instructions (leave blank to omit section):"
+        message: "Enter installation instructions:"
     },
     {
         type: "input",
         name: "usage",
-        message: "Enter usage information (leave blank to omit section):"
+        message: "Enter usage information:"
     },
     {
         type: "input",
         name: "contribution",
-        message: "How to contribute to the project (leave blank to omit section):"
+        message: "How to contribute to the project:"
     },
     {
         type: "input",
         name: "test",
-        message: "Enter test instructions (leave blank to omit section):"
+        message: "Enter test instructions:"
     },
     {
         type: "list",
@@ -51,7 +51,7 @@ const questions = [
     {
         type: "input",
         name: "credit",
-        message: "Enter project contributers (leave blank to omit section):"
+        message: "Enter project contributers:"
     },
     {
         type: "input",
@@ -79,9 +79,10 @@ const questions = [
     }
 ];
 
+// File name and path it will be created in
 var file = "./generated/README.md";
 
-// TODO: Create a function to write README file
+// Custom promise function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) =>{
         fs.writeFile(fileName, data, error =>{
@@ -92,13 +93,13 @@ function writeToFile(fileName, data) {
 
             resolve({
                 ok:true, 
-                message:"File written!"
+                message:"\nFile written!"
             });
         });
     });
 }
 
-// TODO: Create a function to initialize app
+// initialize the app by chaining promises
 function init() {
     inquirer
         .prompt(questions)
@@ -109,4 +110,9 @@ function init() {
 }
 
 // Function call to initialize app
+console.log("\n Welcome to Pro-README-Generator!");
+console.log(" Answer questions as required to generate a professional README document.");
+console.log(" You may submit non-required questions blank to omit the section.");
+console.log(" The README.md file will be available in the 'generated' folder following the completion of the questionnaire.");
+console.log(" Pro-Tip: Enter <br/> for a line break in the markup \n");
 init();
