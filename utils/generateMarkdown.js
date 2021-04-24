@@ -1,3 +1,4 @@
+//Global array used to create a dynamic table of contents
 var tableOfContents = [];
 
 // Returns a license badge based on which license is passed in
@@ -24,8 +25,7 @@ function renderLicenseSection(license) {
     return'';
   }
 
-  return`## License
-${license}`;
+  return`## License\n${license}`;
 }
 
 // Returns string for description section
@@ -34,8 +34,7 @@ function renderDescriptionSection(description){
     return'';
   }
 
-  return`## Description 
-${description}`;
+  return`## Description\n${description}`;
 }
 
 // Returns string for installation section
@@ -44,8 +43,7 @@ function renderInstallationSection(install){
     return'';
   }
 
-  return`## Installation
-${install}`;
+  return`## Installation\n${install}`;
 }
 
 // Returns string for usage section
@@ -54,8 +52,7 @@ function renderUsageSection(usage){
     return'';
   }
 
-  return`## Usage
-${usage}`;
+  return`## Usage\n${usage}`;
 }
 
 // Returns string for contribution section
@@ -64,8 +61,7 @@ function renderContributingSection(contribution){
     return'';
   }
 
-  return`## Contributing
-${contribution}`;
+  return`## Contributing\n${contribution}`;
 }
 
 // Returns string for test section
@@ -74,10 +70,10 @@ function renderTestSection(test){
     return'';
   }
 
-  return`## Tests
-${test}`;
+  return`## Tests\n${test}`;
 }
 
+// Returns string for the questions/contact section
 function renderQuestionsSection(email, github){
 
   return `## Questions
@@ -92,10 +88,10 @@ function renderCreditSection(credit){
     return'';
   }
 
-  return`## Credits
-${credit}`;
+  return`## Credits\n${credit}`;
 }
 
+// Loads the required sections for the table of contents to the global array
 function loadTableOfContents(install, usage, contribution, test, license, credit){
   if(install){tableOfContents.push("Installation");}
   if(usage){tableOfContents.push("Usage");}
@@ -106,6 +102,7 @@ function loadTableOfContents(install, usage, contribution, test, license, credit
   if(credit){tableOfContents.push("Credits");}
 }
 
+// Returns the global array of table of content as a string for rendering
 function createTableOfContents(){
   var returnList = [];
 
@@ -116,6 +113,7 @@ function createTableOfContents(){
   return returnList.join("\n");
 }
 
+// Render the full table of conents section
 function renderTableOfContents(){
 
   return`## Table of Contents
@@ -126,30 +124,26 @@ ${createTableOfContents()}`;
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = ({title, description, install, usage, contribution, test, license, credit, github, email}) =>{
 
+  //Load the table of contents array so that when we go to render it, it will know what sections the user requires
   loadTableOfContents(install, usage, contribution, test, license, credit);
 
-  return `
-# ${title}
-${renderLicenseBadge(license)}
+  //Initialize a temporary array to create our markdown
+  var markdownArray = [];
 
-${renderDescriptionSection(description)}
+  //If sections have content then we push them into the markdown array
+  markdownArray.push(`# ${title}`);
+  if(description){markdownArray.push(renderDescriptionSection(description));}
+  markdownArray.push(renderTableOfContents());
+  if(install){markdownArray.push(renderInstallationSection(install));}
+  if(usage){markdownArray.push(renderUsageSection(usage));}
+  if(license){markdownArray.push(renderLicenseSection(license));}
+  if(contribution){markdownArray.push(renderContributingSection(contribution));}
+  if(test){markdownArray.push(renderTestSection(test));}
+  markdownArray.push(renderQuestionsSection(email,github));
+  if(credit){markdownArray.push(renderCreditSection(credit));}
 
-${renderTableOfContents()}
-
-${renderInstallationSection(install)}
-
-${renderUsageSection(usage)}
-
-${renderLicenseSection(license)}
-
-${renderContributingSection(contribution)}
-
-${renderTestSection(test)}
-
-${renderQuestionsSection(email,github)}
-
-${renderCreditSection(credit)}`;
+  //Return the array of conent sections as a string
+  return markdownArray.join("\n\n");
 }
 
 module.exports = generateMarkdown;
-

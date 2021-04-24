@@ -8,10 +8,10 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "Describe the name of your project:",
+        message: "Enter the name of your project (required):",
         validate: answer => {
             if(!answer){
-                return "Please enter a valid description.";
+                return "Please enter a valid project title.";
             }
 
             return true;
@@ -20,43 +20,43 @@ const questions = [
     {
         type: "input",
         name: "description",
-        message: "Enter a project description:"
+        message: "Write a project description (leave blank to omit section):"
     },
     {
         type: "input",
         name: "install",
-        message: "Enter installation instructions:"
+        message: "Enter installation instructions (leave blank to omit section):"
     },
     {
         type: "input",
         name: "usage",
-        message: "Enter usage information:"
+        message: "Enter usage information (leave blank to omit section):"
     },
     {
         type: "input",
         name: "contribution",
-        message: "How to contribute to the project:"
+        message: "How to contribute to the project (leave blank to omit section):"
     },
     {
         type: "input",
         name: "test",
-        message: "Enter test instructions:"
+        message: "Enter test instructions (leave blank to omit section):"
     },
     {
         type: "list",
         name: "license",
-        message: "Choose a license: ",
+        message: "Choose a software license: ",
         choices: ["MIT License", "GNU GPLv3", "Apache License 2.0", "Mozilla Public License 2.0", "ISC License", "Boost Software License 1.0", "The Unlicense"]
     },
     {
         type: "input",
         name: "credit",
-        message: "Enter project contributers:"
+        message: "Enter project contributers (leave blank to omit section):"
     },
     {
         type: "input",
         name: "github",
-        message: "Enter your GitHub username:",
+        message: "Enter your GitHub username (required):",
         validate: answer => {
             if(!answer){
                 return "Please enter a valid GitHub username.";
@@ -68,7 +68,7 @@ const questions = [
     {
         type: "input",
         name: "email",
-        message: "Enter your email address:",
+        message: "Enter your email address (required):",
         validate: answer => {
             if(!answer){
                 return "Please enter a valid email address.";
