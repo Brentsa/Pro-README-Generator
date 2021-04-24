@@ -25,7 +25,7 @@ function renderLicenseSection(license) {
   }
 
   return`## License
-  ${license}`;
+${license}`;
 }
 
 // Returns string for description section
@@ -35,7 +35,7 @@ function renderDescriptionSection(description){
   }
 
   return`## Description 
-  ${description}`;
+${description}`;
 }
 
 // Returns string for installation section
@@ -45,7 +45,7 @@ function renderInstallationSection(install){
   }
 
   return`## Installation
-  ${install}`;
+${install}`;
 }
 
 // Returns string for usage section
@@ -55,7 +55,7 @@ function renderUsageSection(usage){
   }
 
   return`## Usage
-  ${usage}`;
+${usage}`;
 }
 
 // Returns string for contribution section
@@ -65,7 +65,7 @@ function renderContributingSection(contribution){
   }
 
   return`## Contributing
-  ${contribution}`;
+${contribution}`;
 }
 
 // Returns string for test section
@@ -75,15 +75,15 @@ function renderTestSection(test){
   }
 
   return`## Tests
-  ${test}`;
+${test}`;
 }
 
 function renderQuestionsSection(email, github){
 
   return `## Questions
-  You can reach me via:
-  * Email: ${email}
-  * GitHub: ${github}`;
+You can reach me via:
+* Email: ${email}
+* GitHub: [${github}](https://github.com/${github})`;
 }
 
 // Returns string for credit section
@@ -93,7 +93,7 @@ function renderCreditSection(credit){
   }
 
   return`## Credits
-  ${credit}`;
+${credit}`;
 }
 
 function loadTableOfContents(install, usage, contribution, test, license, credit){
@@ -120,7 +120,7 @@ function renderTableOfContents(){
 
   return`## Table of Contents
 
-  ${createTableOfContents()}`;
+${createTableOfContents()}`;
 }
 
 // TODO: Create a function to generate markdown for README
