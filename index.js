@@ -25,22 +25,22 @@ const questions = [
     {
         type: "input",
         name: "install",
-        message: "Enter installation instructions:"
+        message: "List installation instructions for the project:"
     },
     {
         type: "input",
         name: "usage",
-        message: "Enter usage information:"
+        message: "Enter information on how to use the application:"
     },
     {
         type: "input",
         name: "contribution",
-        message: "How to contribute to the project:"
+        message: "Provide guidelines for other developers to contribute to the project:"
     },
     {
         type: "input",
         name: "test",
-        message: "Enter test instructions:"
+        message: "Write tests for the application and examples on how to use them:"
     },
     {
         type: "list",
@@ -51,7 +51,7 @@ const questions = [
     {
         type: "input",
         name: "credit",
-        message: "Enter project contributers:"
+        message: "List the project contributors:"
     },
     {
         type: "input",
