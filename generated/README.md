@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-  * [License](#License)
+* [License](#License)
 * [Contributing](#Contributing)
 * [Tests](#Tests)
 * [Questions](#Questions)
